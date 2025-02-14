@@ -5,6 +5,8 @@ This script computes integrated water vapor transport by integrating specific hu
 
 **How IVT is Calculated**
 
+## How IVT is Calculated
+
 The **Integrated Vapor Transport (IVT)** is computed as:
 
 <p align="center"> 
@@ -26,7 +28,7 @@ where:
 Here:
 - \( q \) = Specific humidity (kg/kg)
 - \( u, v \) = Zonal and meridional wind components (m/s)
-- \( dp \) = Pressure thickness of each level (must be in Pa)
+- \( dp \) = Pressure thickness of each level
 - \( g \) = Gravitational acceleration (9.81 m/s²)
 - \( p_{\text{sfc}} \) = Surface pressure
-- \( p_{\text{top}} \) = Upper pressure limit 
+- \( p_{\text{top}} \) = Upper pressure limit (300 hPa in this case)
