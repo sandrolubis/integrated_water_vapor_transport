@@ -12,10 +12,10 @@ $$ IVT = \sqrt{IVTx^2 + IVTy^2} $$
 where:
 
 - **Zonal Component (IVTx):**
-  $$ IVTx = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot u \frac{dp}{g} $$
+  $$ IVTx $$ = $$ \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot u \frac{dp}{g} $$
 
 - **Meridional Component (IVTy):**
-  $$ IVTy = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot v \frac{dp}{g} $$
+  $$ IVTy $$ = $$ \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot v \frac{dp}{g} $$
 
 Here:
 - \( q \) = Specific humidity (kg/kg)
