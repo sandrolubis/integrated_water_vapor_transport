@@ -7,7 +7,7 @@ This script computes integrated water vapor transport by integrating specific hu
 
 The **Integrated Vapor Transport (IVT)** is computed as:
 
-$\textbf{IVT} = \left[ \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qu , dp \right)^2 + \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qv , dp \right)^2 \right]^{\frac{1}{2}}$
+\textbf{IVT} = \left[ \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qu , dp \right)^2 + \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qv , dp \right)^2 \right]^{\frac{1}{2}}
 
 where:
 
