@@ -7,21 +7,21 @@ This script computes integrated water vapor transport by integrating specific hu
 
 The **Integrated Vapor Transport (IVT)** is computed as:
 
-\[
-IVT = \sqrt{IVTx^2 + IVTy^2}
-\]
+<p align="center"> 
+    \( IVT = \sqrt{IVTx^2 + IVTy^2} \)
+</p>
 
 where:
 
-- **Zonal Component (IVTx):**
-  \[
-  IVTx = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot u \frac{dp}{g}
-  \]
-  
-- **Meridional Component (IVTy):**
-  \[
-  IVTy = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot v \frac{dp}{g}
-  \]
+- **Zonal Component (IVTx)**:
+  <p align="center"> 
+      \( IVTx = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot u \frac{dp}{g} \)
+  </p>
+
+- **Meridional Component (IVTy)**:
+  <p align="center"> 
+      \( IVTy = \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot v \frac{dp}{g} \)
+  </p>
 
 Here:
 - \( q \) = Specific humidity (kg/kg)
