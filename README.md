@@ -15,13 +15,13 @@ $$
 where
 
 $$
-IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u dp
+IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u  dp
 $$
 
 and
 
 $$
-IVT_y = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v dp
+IVT_y = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v  dp
 $$
 
 Equivalently,
@@ -30,11 +30,11 @@ $$
 IVT =
 \left[
 \left(
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u dp
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u  dp
 \right)^2
 +
 \left(
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v dp
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v  dp
 \right)^2
 \right]^{1/2}
 $$
