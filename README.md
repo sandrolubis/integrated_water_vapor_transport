@@ -15,26 +15,26 @@ $$
 where
 
 $$
-IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u  dp
+IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u \, dp
 $$
 
 and
 
 $$
-IVT_y = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v  dp
+IVT_y = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v \, dp
 $$
 
 Equivalently,
 
 $$
-IVT =
+\mathbf{IVT} =
 \left[
 \left(
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u  dp
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u \, dp
 \right)^2
 +
 \left(
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v  dp
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v \, dp
 \right)^2
 \right]^{1/2}
 $$
@@ -52,17 +52,5 @@ where:
 The units of IVT are:
 
 $$
-kg \; m^{-1} \; s^{-1}
+kg \, m^{-1} \, s^{-1}
 $$
-
-In discrete form, the IVT components can be approximated as:
-
-$$
-IVT_x = \frac{1}{g} \sum_{k} q_k u_k \Delta p_k
-$$
-
-$$
-IVT_y = \frac{1}{g} \sum_{k} q_k v_k \Delta p_k
-$$
-
-where \(k\) represents each pressure level and \(\Delta p_k\) is the pressure-layer thickness.
