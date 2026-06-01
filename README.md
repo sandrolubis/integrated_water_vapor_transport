@@ -135,7 +135,7 @@ The output variables are:
 
 All output variables have units of:
 
-$$kg \, m^{-1} \, s^{-1}$$
+$$kg m^{-1} s^{-1}$$
 
 Note that the decomposition is exact for the vector components, `IVT_x` and `IVT_y`. The magnitude of each contribution is useful for diagnosis, but because magnitude is nonlinear:
 
