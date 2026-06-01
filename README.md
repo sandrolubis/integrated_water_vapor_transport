@@ -1,34 +1,56 @@
-## Integrated Water Vapor Transport (IVT) ##
-by Sandro W. Lubis (PNNL)
+# Integrated Water Vapor Transport (IVT)
 
-This script computes integrated water vapor transport by integrating specific humidity (q) and horizontal wind components (u, v) over a specified vertical pressure range. The output can be used to study moisture flux patterns and their role in large-scale weather systems.
+**Author:** Sandro W. Lubis, PNNL
 
-## How IVT is Calculated
+This script calculates **Integrated Water Vapor Transport (IVT)** by vertically integrating specific humidity (`q`) and horizontal wind components (`u`, `v`) over a selected pressure layer. The resulting IVT fields can be used to analyze moisture transport, atmospheric rivers, and the role of moisture fluxes in large-scale weather systems.
 
-The **Integrated Vapor Transport (IVT)** is computed as:
+## How IVT Is Calculated
 
-$$ IVT = \sqrt{IVTx^2 + IVTy^2} $$
+The magnitude of IVT is computed from its zonal and meridional components:
 
-or 
+$$
+IVT = \sqrt{IVT_x^2 + IVT_y^2}
+$$
 
-\textbf{IVT} = \left[ \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qu , dp \right)^2 + \left( \frac{1}{g} \int_{p_{sfc}}^{p_{top}} qv , dp \right)^2 \right]^{\frac{1}{2}}
+where
+
+$$
+IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u \, dp
+$$
+
+and
+
+$$
+IVT_y = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v \, dp
+$$
+
+Equivalently,
+
+$$
+\mathbf{IVT} =
+\left[
+\left(
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u \, dp
+\right)^2
++
+\left(
+\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q v \, dp
+\right)^2
+\right]^{1/2}
+$$
 
 where:
 
-- **Zonal Component (IVTx):**
-- 
-  IVTx  =  \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot u \frac{dp}{g} 
+- `q` is specific humidity in kg kg\(^{-1}\)
+- `u` is the zonal wind component in m s\(^{-1}\)
+- `v` is the meridional wind component in m s\(^{-1}\)
+- `dp` is the pressure thickness of each layer in Pa
+- `g` is gravitational acceleration, approximately 9.81 m s\(^{-2}\)
+- \(p_{sfc}\) is the surface pressure
+- \(p_{top}\) is the upper pressure limit of the integration layer
 
-- **Meridional Component (IVTy):**
-- 
-  IVTy =  \int_{p_{\text{top}}}^{p_{\text{sfc}}} q \cdot v \frac{dp}{g} 
+The units of IVT are:
 
-Here:
-- \( q \) = Specific humidity (kg/kg)
-- \( u, v \) = Zonal and meridional wind components (m/s)
-- \( dp \) = Pressure thickness of each level (must be in Pa)
-- \( g \) = Gravitational acceleration (9.81 m/s²)
-- \( p_{\text{sfc}} \) = Surface pressure
-- \( p_{\text{top}} \) = Upper pressure limit
-
-
+$$
+kg \, m^{-1} \, s^{-1}
+$$
