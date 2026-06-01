@@ -65,4 +65,4 @@ for var in q u v; do
 
     echo "Saved: $clim"
 
-donecal_clim.sh
+done
