@@ -137,6 +137,10 @@ All output variables have units of:
 
 $$kg m^{-1} s^{-1}$$
 
-Note that the decomposition is exact for the vector components, `IVT_x` and `IVT_y`. The magnitude of each contribution is useful for diagnosis, but because magnitude is nonlinear:
+This decomposition helps identify whether IVT changes are mainly caused by wind anomalies, moisture anomalies, or their combined effect.
 
-$$IVT' \neq IVT_{dyn} + IVT_{thermo} + IVT_{nonlinear}$$
+- `IVT_dyn` represents the contribution from anomalous winds acting on climatological moisture.
+- `IVT_thermo` represents the contribution from anomalous moisture transported by climatological winds.
+- `IVT_nonlinear` represents the interaction between anomalous winds and anomalous moisture.
+
+The decomposition is exact for the vector components `IVT_x` and `IVT_y`. The scalar magnitudes of each term are useful for diagnosis, but they do not necessarily add exactly to the total IVT anomaly because IVT magnitude is calculated using a square root.
