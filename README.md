@@ -59,21 +59,15 @@ $$
 
 ## IVT Anomaly Decomposition
 
-This script also decomposes IVT into dynamic, thermodynamic, and nonlinear contributions. The decomposition is based on separating moisture and wind fields into climatological and anomalous components.
+This script decomposes IVT into dynamic, thermodynamic, and nonlinear contributions by separating moisture and wind into climatological and anomalous components.
 
 Specific humidity and winds are written as:
 
-$$
-q = \overline{q} + q'
-$$
+$$q = \overline{q} + q'$$
 
-$$
-u = \overline{u} + u'
-$$
+$$u = \overline{u} + u'$$
 
-$$
-v = \overline{v} + v'
-$$
+$$v = \overline{v} + v'$$
 
 where:
 
@@ -84,102 +78,47 @@ where:
 
 The zonal IVT component is:
 
-$$
-IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u \; dp
-$$
+$$IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q u, dp$$
 
 Substituting the climatological and anomalous components gives:
 
-$$
-IVT_x =
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}}
-(\overline{q} + q')(\overline{u} + u') \; dp
-$$
+$$IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} (\overline{q} + q')(\overline{u} + u'), dp$$
 
 After expansion:
 
-$$
-IVT_x =
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}\overline{u} \; dp
-+
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}u' \; dp
-+
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{u} \; dp
-+
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'u' \; dp
-$$
+$$IVT_x = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}\overline{u}, dp + \frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}u', dp + \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{u}, dp + \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'u', dp$$
 
 Therefore, the zonal IVT anomaly can be decomposed as:
 
-$$
-IVT_x' = IVT_{x,dyn} + IVT_{x,thermo} + IVT_{x,nonlinear}
-$$
+$$IVT_x' = IVT_{x,dyn} + IVT_{x,thermo} + IVT_{x,nonlinear}$$
 
 where:
 
-$$
-IVT_{x,dyn}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}u' \; dp
-$$
+$$IVT_{x,dyn} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}u', dp$$
 
-$$
-IVT_{x,thermo}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{u} \; dp
-$$
+$$IVT_{x,thermo} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{u}, dp$$
 
-$$
-IVT_{x,nonlinear}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'u' \; dp
-$$
+$$IVT_{x,nonlinear} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'u', dp$$
 
 Similarly, the meridional IVT anomaly is:
 
-$$
-IVT_y' = IVT_{y,dyn} + IVT_{y,thermo} + IVT_{y,nonlinear}
-$$
+$$IVT_y' = IVT_{y,dyn} + IVT_{y,thermo} + IVT_{y,nonlinear}$$
 
 where:
 
-$$
-IVT_{y,dyn}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}v' \; dp
-$$
+$$IVT_{y,dyn} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} \overline{q}v', dp$$
 
-$$
-IVT_{y,thermo}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{v} \; dp
-$$
+$$IVT_{y,thermo} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'\overline{v}, dp$$
 
-$$
-IVT_{y,nonlinear}
-=
-\frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'v' \; dp
-$$
+$$IVT_{y,nonlinear} = \frac{1}{g} \int_{p_{top}}^{p_{sfc}} q'v', dp$$
 
-The magnitude of each contribution is then calculated as:
+The magnitude of each contribution is calculated as:
 
-$$
-IVT_{dyn}
-=
-\sqrt{IVT_{x,dyn}^{2} + IVT_{y,dyn}^{2}}
-$$
+$$IVT_{dyn} = \sqrt{IVT_{x,dyn}^{2} + IVT_{y,dyn}^{2}}$$
 
-$$
-IVT_{thermo}
-=
-\sqrt{IVT_{x,thermo}^{2} + IVT_{y,thermo}^{2}}
-$$
+$$IVT_{thermo} = \sqrt{IVT_{x,thermo}^{2} + IVT_{y,thermo}^{2}}$$
 
-$$
-IVT_{nonlinear}
-=
-\sqrt{IVT_{x,nonlinear}^{2} + IVT_{y,nonlinear}^{2}}
-$$
+$$IVT_{nonlinear} = \sqrt{IVT_{x,nonlinear}^{2} + IVT_{y,nonlinear}^{2}}$$
 
 where:
 
@@ -196,12 +135,8 @@ The output variables are:
 
 All output variables have units of:
 
-$$
-kg \; m^{-1} \; s^{-1}
-$$
+$$kg \, m^{-1} \, s^{-1}$$
 
 Note that the decomposition is exact for the vector components, `IVT_x` and `IVT_y`. The magnitude of each contribution is useful for diagnosis, but because magnitude is nonlinear:
 
-$$
-IVT' \neq IVT_{dyn} + IVT_{thermo} + IVT_{nonlinear}
-$$
+$$IVT' \neq IVT_{dyn} + IVT_{thermo} + IVT_{nonlinear}$$
